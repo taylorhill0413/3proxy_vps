@@ -1,4 +1,4 @@
-# HƯỚNG DẪN CÀI ĐẶT PROXY IPv6 TRÊN CLOUD SERVER CỦA CLOUDFLY
+# Hướng dẫn cài đặt Proxy IPv6 trên Cloud Server của CloudFly
 Để cài đặt Proxy theo range IPv6 tại CloudFly trên máy chủ CentOS 7.9 thì mình thực hiện các bước sau ạ:
 
 Bước 1. Cấu hình địa chỉ IPv6 vào máy chủ bằng lệnh:
