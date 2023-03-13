@@ -10,7 +10,7 @@ IPV6_DEFAULTGW=2001:df7:c600:6::1" >> /etc/sysconfig/network-scripts/ifcfg-eth0
 
 service network restart
 
-==> Lưu ý: Thay đổi IPV6ADDR và IPV6_DEFAULTGW theo đúng thông tin Public IPv6 Network của máy chủ trong Tab Networking 
+==> Lưu ý: Thay đổi IPV6ADDR và IPV6_DEFAULTGW theo đúng thông tin Public IPv6 Network của máy chủ trong Tab Networking. IPV6ADDR là Address IPv6 và IPV6_DEFAULTGW là Gateway
 
 - Kiểm tra cấu hình IPv6 thành công bằng cách chạy lệnh: ping6 cloudfly.vn
 
