@@ -73,6 +73,19 @@ gen_ifconfig() {
 $(awk -F "/" '{print "ifconfig eth0 inet6 add " $5 "/64"}' ${WORKDATA})
 EOF
 }
+
+echo "touch /var/lock/subsys/local
+for iface in $(ip -o link | cut -d: -f2 | tr -d ' ' | grep ^eth)
+do
+   test -f /etc/sysconfig/network-scripts/ifcfg-$iface
+   if [ $? -ne 0 ]
+   then
+       touch /etc/sysconfig/network-scripts/ifcfg-$iface
+       echo -e "DEVICE=\$iface\nBOOTPROTO=dhcp\nONBOOT=yes" > /etc/sysconfig/network-scripts/ifcfg-\$iface
+       ifup $iface
+   fi
+done" > /etc/rc.d/rc.local
+
 echo "installing apps"
 yum -y install wget gcc net-tools bsdtar zip >/dev/null
 
