@@ -97,7 +97,7 @@ echo "Internal ip = ${IP4}. Exteranl sub for ip6 = ${IP6}"
 while :; do
   read -p "Enter FIRST_PORT between 33000 and 63000: " FIRST_PORT
   [[ $FIRST_PORT =~ ^[0-9]+$ ]] || { echo "Enter a valid number"; continue; }
-  if ((FIRST_PORT >= 21000 && FIRST_PORT <= 61000)); then
+  if ((FIRST_PORT >= 33000 && FIRST_PORT <= 63000)); then
     echo "OK! Valid number"
     break
   else
