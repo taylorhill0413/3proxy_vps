@@ -95,9 +95,9 @@ IP6=$(curl -6 -s icanhazip.com | cut -f1-4 -d':')
 echo "Internal ip = ${IP4}. Exteranl sub for ip6 = ${IP6}"
 
 while :; do
-  read -p "Enter FIRST_PORT between 11000 and 61000: " FIRST_PORT
+  read -p "Enter FIRST_PORT between 21000 and 61000: " FIRST_PORT
   [[ $FIRST_PORT =~ ^[0-9]+$ ]] || { echo "Enter a valid number"; continue; }
-  if ((FIRST_PORT >= 11000 && FIRST_PORT <= 61000)); then
+  if ((FIRST_PORT >= 21000 && FIRST_PORT <= 61000)); then
     echo "OK! Valid number"
     break
   else
