@@ -2,7 +2,7 @@
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 
 random() {
-	tr </dev/urandom -dc A-Za-z0-9 | head -c5
+	tr </dev/urandom -dc A-Za-z0-9 | head -c12
 	echo
 }
 
